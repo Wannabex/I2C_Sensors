@@ -15,7 +15,7 @@
  }
  void lightsensorInitialize(void)
  {
-	 databuffer[0]= ALSEnable | ALSPowerOn;
+	 databuffer[0] = ALSEnable | ALSPowerOn;
 	i2cWrite(TSL25721,COMMANDnormMemAdr| ALSEnableRegisterMemAdr, databuffer, 1);
 	 databuffer[0] = ALStime101ms;
 	i2cWrite(TSL25721,COMMANDnormMemAdr | ALSTimeRegisterMemAdr, databuffer, 1);
@@ -33,7 +33,6 @@
    i2cWrite(HTS221,HumCtrl1RegisterMemAdr, databuffer, 1);
 	 databuffer[0]= HumNumberOfSamples64;
 	 i2cWrite(HTS221,HumConfigRegisterMemAdr, databuffer, 1);
-	 
 	 // Let's read callibration coefficients for interpolation
 	i2cRead(HTS221,HumCalCoeff0RegisterMemadr | (1<<7), databuffer, 2 );
 	  Hcoeff0 = databuffer[0] / 2;
@@ -49,7 +48,6 @@ float tempRead ()
  {
  i2cRead(STLM75,TempDataRegisterMemAdr, databuffer, 2 );
 	temperature_value =(((uint16_t)databuffer[1] << 8) | databuffer[0]) >>7;
-	for(i=0;i<2;i++)
 	 if(temperature_value && ((uint16_t)(1<<8)) ==1) 
 	 tempresult=(-0.5)*(float)temperature_value;
 	 else

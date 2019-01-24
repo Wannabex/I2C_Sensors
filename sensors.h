@@ -12,11 +12,7 @@
  #define sensors_h
  
  #include "MKL46Z4.h"
- #include "buttons.h"
- #include "slcd.h"
- #include "leds.h"
  #include "i2c.h"
- #include "UART0.h"
  
  // slave adresses
 #define STLM75 0x49// temperature sensor adress
@@ -87,6 +83,5 @@ static uint16_t humresult;
 static float cpl, lux1, lux2;
 static uint8_t Hcoeff0, Hcoeff1;
 static uint16_t Hinterpol0, Hinterpol1;
-static uint8_t i; 
 
  #endif

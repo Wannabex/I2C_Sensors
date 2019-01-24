@@ -5,12 +5,11 @@
 .\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.3.0\Device\Include\system_MKL46Z4.h
-.\objects\main.o: buttons.h
-.\objects\main.o: leds.h
-.\objects\main.o: extra.h
-.\objects\main.o: sensors.h
-.\objects\main.o: buttons.h
 .\objects\main.o: slcd.h
+.\objects\main.o: extra.h
+.\objects\main.o: leds.h
 .\objects\main.o: i2c.h
 .\objects\main.o: UART0.h
+.\objects\main.o: sensors.h
+.\objects\main.o: pit.h
 .\objects\main.o: UART0.h

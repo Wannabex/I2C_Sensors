@@ -26,6 +26,10 @@ void ledsInitialize(void){
 	
 	PTD->PSOR = led_mask[ledGreen];  /* switch Green LED off */
 	PTE->PSOR = led_mask[ledRed];  /* switch Red LED off */
+	
+	//welcome sequence
+	ledredBlink(2,50);
+	ledgreenBlink(1,25);
 }
 /*----------------------------------------------------------------------------
   Function that blinks (x) times green led with (y) delay in mc
