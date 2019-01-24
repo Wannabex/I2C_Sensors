@@ -15,7 +15,7 @@
  }
  void lightsensorInitialize(void)
  {
-	 databuffer[0]= ALSEnable | ALSPowerOn;
+	 databuffer[0] = ALSEnable | ALSPowerOn;
 	i2cWrite(TSL25721,COMMANDnormMemAdr| ALSEnableRegisterMemAdr, databuffer, 1);
 	 databuffer[0] = ALStime101ms;
 	i2cWrite(TSL25721,COMMANDnormMemAdr | ALSTimeRegisterMemAdr, databuffer, 1);
@@ -49,7 +49,6 @@ float tempRead ()
  {
  i2cRead(STLM75,TempDataRegisterMemAdr, databuffer, 2 );
 	temperature_value =(((uint16_t)databuffer[1] << 8) | databuffer[0]) >>7;
-	for(i=0;i<2;i++)
 	 if(temperature_value && ((uint16_t)(1<<8)) ==1) 
 	 tempresult=(-0.5)*(float)temperature_value;
 	 else
