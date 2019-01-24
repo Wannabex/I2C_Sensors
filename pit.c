@@ -63,7 +63,6 @@
 					uart0sendblock(humidRead());
 					break;
 				}
-			}
 		uart0transmit(' ');
 		i++;
 		i=i%4;	
